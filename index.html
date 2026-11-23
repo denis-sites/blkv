@@ -702,8 +702,10 @@ const scheme=$('#scheme'),scSeg=$('#scSeg');let scT;
 function setAfter(v){scheme.classList.toggle('after',v);scSeg.classList.toggle('r',v);scSeg.querySelectorAll('button').forEach(b=>b.classList.toggle('on',(b.dataset.v==='1')===v));$('#scLbl').textContent=v?'После':'Сейчас'}
 scSeg.querySelectorAll('button').forEach(b=>b.onclick=()=>{clearTimeout(scT);setAfter(b.dataset.v==='1')});
 // FIXPHOTO=true, когда в img/ лягут fix-after.jpg и fix-<проблема>.jpg: рисунок заменится фото. Пока false = схема
-const FIXPHOTO=false;
-if(FIXPHOTO){const fxImg=new Image();fxImg.onload=()=>{$('#fxAft').src=fxImg.src;scheme.classList.add('photo');$('#fxNow').src='img/fix-'+FIX[fx].s+'.jpg'};fxImg.src='img/fix-after.jpg'}
+const FIXPHOTO=true;
+if(FIXPHOTO){const fxImg=new Image();fxImg.onload=()=>{$('#fxAft').src=fxImg.src;scheme.classList.add('photo');$('#fxNow').src='img/fix-'+FIX[fx].s+'.jpg';
+ // остальные кадры подгружаем заранее, чтобы при выборе проблемы не было пустого мигания
+ FIX.forEach(f=>{const i=new Image();i.src='img/fix-'+f.s+'.jpg'})};fxImg.src='img/fix-after.jpg'}
 function renderFix(anim){const f=FIX[fx],tot=f.p+(addOn?ADD.p:0);scheme.dataset.s=f.s;if(scheme.classList.contains('photo'))$('#fxNow').src='img/fix-'+f.s+'.jpg';setAfter(false);clearTimeout(scT);if(!RM)scT=setTimeout(()=>setAfter(true),1800);
  $$('#sym button').forEach((b,i)=>{b.classList.toggle('on',i===fx);b.setAttribute('aria-checked',i===fx)});
  const r=$('#resB');r.innerHTML=`<div class="${anim?'swap':''}"><div class="svc">Что делаем</div><h3>${f.svc}</h3><ul>${f.li.map(x=>`<li>${x}</li>`).join('')}</ul>
