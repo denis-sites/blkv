@@ -20,7 +20,7 @@
 "geo":{"@type":"GeoCoordinates","latitude":55.644534,"longitude":36.977535},
 "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"},
 "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"20","reviewCount":"15","bestRating":"5"},
-"sameAs":["https://t.me/BLKV_LIGHT","https://yandex.ru/maps/org/136634259206/"],
+"sameAs":["https://t.me/BLKV_LIGHT","https://wa.me/79951182607","https://yandex.ru/maps/org/136634259206/"],
 "makesOffer":[
  {"@type":"Offer","name":"Установка Bi-LED линз под ключ","price":"20000","priceCurrency":"RUB"},
  {"@type":"Offer","name":"Ремонт фар, ДХО и «ангельских глазок»","price":"12000","priceCurrency":"RUB"},
@@ -209,7 +209,7 @@ html.lock{overflow:hidden}
 @keyframes glowspin{to{transform:translate(-50%,-50%) rotate(1turn)}}
 .bk:not(.on) .bk-card:before{animation-play-state:paused}
 .bk-card:after{content:"";position:absolute;inset:1px;z-index:-1;border-radius:17px;background:radial-gradient(120% 70% at 50% 0%,#1c1a16 0,#0b0b0d 55%,#070708 100%)}
-.bk-in{position:relative;padding:30px 26px 24px}
+.bk-in{position:relative;padding:30px 26px 24px;max-height:calc(100dvh - 40px);overflow-y:auto;overscroll-behavior:contain}
 .bk-x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cfd2ca;font-size:22px;line-height:1;cursor:pointer}
 .bk-grab{display:none}
 .bk-k{display:block;font:600 11px var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
@@ -230,7 +230,8 @@ html.lock{overflow:hidden}
 .bk-note{min-height:20px;margin-top:10px;color:#cfd2ca;font-size:13.5px;text-align:center}
 .js .bk .bk-o{opacity:0;transform:translate3d(0,14px,0)}
 .bk.on .bk-o{opacity:1;transform:none;transition:opacity .5s ease,transform .7s var(--ease),background .25s,border-color .25s}
-.bk.on .bk-o:nth-child(1){transition-delay:.12s}.bk.on .bk-o:nth-child(2){transition-delay:.18s}
+.bk.on .bk-o:nth-child(1){transition-delay:.12s}.bk.on .bk-o:nth-child(2){transition-delay:.18s}.bk.on .bk-o:nth-child(3){transition-delay:.24s}.bk.on .bk-o:nth-child(4){transition-delay:.3s}
+button.bk-o{width:100%;text-align:left;cursor:pointer;color:inherit;font:inherit}
 
 /* лого: настоящий знак BLKV из карточки */
 .logo img{background:#000}
@@ -450,7 +451,7 @@ html.lock{overflow:hidden}
 @media (max-width:640px){
  .bk{place-items:end center;padding:0}
  .bk-card{width:100%;border-radius:18px 18px 0 0;transform:translate3d(0,100%,0);transition:opacity .3s ease,transform .6s var(--ease)}
- .bk-in{padding:12px 20px max(22px,env(safe-area-inset-bottom))}
+ .bk-in{padding:12px 20px max(22px,env(safe-area-inset-bottom));max-height:calc(100dvh - 24px)}
  .bk-grab{display:block;width:40px;height:4px;border-radius:4px;background:rgba(255,255,255,.2);margin:0 auto 18px}
  .bk-x{top:22px}
  .sym button{padding:15px 14px;gap:10px;grid-template-columns:22px minmax(0,1fr) auto}.sym em{font-size:13px}
@@ -592,7 +593,7 @@ html.lock{overflow:hidden}
 <section class="how" id="how"><div class="side"><div class="k" data-r>Как записаться</div><h2>От сообщения<br><em>до света</em></h2>
   <p data-r>Можно начать с фото фары. Цену знаете заранее.</p></div>
  <div class="tl" id="tl"><span class="tl-rail"><i class="tl-fill" id="tlFill"></i></span><span class="tl-dot" id="tlDot"></span>
-  <div class="ts"><span class="num" data-n="01">01</span><div><h4>Пишете или звоните</h4><p>Марка машины и что беспокоит. Пришлите фото фары днём и как она светит вечером, так быстрее.</p><span class="tag">Telegram или звонок</span></div></div>
+  <div class="ts"><span class="num" data-n="01">01</span><div><h4>Пишете или звоните</h4><p>Марка машины и что беспокоит. Пришлите фото фары днём и как она светит вечером, так быстрее.</p><span class="tag">Telegram, WhatsApp, Max или звонок</span></div></div>
   <div class="ts"><span class="num" data-n="02">02</span><div><h4>Подбираем и называем цену</h4><p>Подскажем, какие линзы и компоненты подойдут. Цена и срок до начала работ.</p><span class="tag">Цена не меняется</span></div></div>
   <div class="ts"><span class="num" data-n="03">03</span><div><h4>Делаем</h4><p>Регулировка 20–30 минут. Линзы часто ставим за день: утром отдали, вечером забрали.</p><span class="tag">Часто за день</span></div></div>
   <div class="ts"><span class="num" data-n="04">04</span><div><h4>Проверяем свет вместе</h4><p>Выставляем границу света, чтобы не слепить встречных. Если потом что-то подправить, пишите.</p><span class="tag">Гарантия на работы</span></div></div>
@@ -610,7 +611,7 @@ html.lock{overflow:hidden}
 
 <!-- контакты -->
 <section class="ct" id="contacts"><div><div class="k" data-r>Контакты</div><h2>Приезжайте<br><em>на Звенигородку</em></h2>
-  <dl data-r><div><dt>Адрес</dt><dd>Звенигородское шоссе, 33-й км, 2<small>Посёлок Летний Отдых, Одинцовский округ</small></dd></div><div><dt>Режим</dt><dd>Ежедневно 10:00–20:00</dd></div><div><dt>Телефон</dt><dd><a href="tel:+79951182607">+7 (995) 118-26-07</a><small>Звонок или Max. Telegram: <a href="https://t.me/BLKV_LIGHT" target="_blank" rel="noopener">@BLKV_LIGHT</a></small></dd></div></dl>
+  <dl data-r><div><dt>Адрес</dt><dd>Звенигородское шоссе, 33-й км, 2<small>Посёлок Летний Отдых, Одинцовский округ</small></dd></div><div><dt>Режим</dt><dd>Ежедневно 10:00–20:00</dd></div><div><dt>Телефон</dt><dd><a href="tel:+79951182607">+7 (995) 118-26-07</a><small>На этом номере звонок, <a href="https://wa.me/79951182607" target="_blank" rel="noopener">WhatsApp</a> и Max. Telegram: <a href="https://t.me/BLKV_LIGHT" target="_blank" rel="noopener">@BLKV_LIGHT</a></small></dd></div></dl>
   <div class="cta" data-r><a class="btn a" href="#book" data-book>Записаться</a><a class="btn o" href="tel:+79951182607">Позвонить</a></div></div>
  <div class="gate" id="gate" data-r>
   <svg class="mc-map-svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -642,6 +643,8 @@ html.lock{overflow:hidden}
   <small class="bk-k">Запись</small><h3 id="bkT">Куда вам удобнее написать?</h3><p class="bk-sub" id="bkS"></p>
   <div class="bk-list">
    <a class="bk-o" data-ch="tg" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.3 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.3-1.5zM9.6 14.6l-.4 4.1-1.4-4.6 10.6-6.7-8.8 7.2z"/></svg></i><span><b>Telegram</b><small>Александр, текст скопируем</small></span><em>→</em></a>
+   <a class="bk-o" data-ch="wa" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></i><span><b>WhatsApp</b><small>Александр, текст подставим</small></span><em>→</em></a>
+   <button class="bk-o" data-ch="max" type="button"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.4 1.1 4.6 3 6.2L4.3 21l3.6-1.8c1.3.4 2.6.6 4.1.6 5.5 0 10-3.9 10-8.7S17.5 3 12 3zm-4.6 11.6V8.8h1.4l2 2.9 2-2.9h1.4v5.8h-1.5v-3.5l-1.9 2.6-1.9-2.6v3.5H7.4z"/></svg></i><span><b>Max</b><small>Тот же номер, текст скопируем</small></span><em>→</em></button>
    <a class="bk-o" data-ch="call"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></i><span><b>Позвонить</b><small id="bkPh"></small></span><em>→</em></a>
   </div>
   <div class="bk-msg" id="bkM"><b>Текст для чата</b><span id="bkMt"></span></div>
@@ -749,13 +752,14 @@ const lb=$('#lb');let lbFrom=null;
 $$('.c').forEach(c=>c.addEventListener('click',()=>{lbFrom=c;$('#lbi').src=c.querySelector('img').src;$('#lbi').alt=c.querySelector('img').alt;$('#lbt').textContent=c.querySelector('h3').textContent;$('#lbp').textContent=c.dataset.p;lb.classList.add('on');$('#lbx').focus({preventScroll:true})}));
 const closeLb=()=>{if(!lb.classList.contains('on'))return;lb.classList.remove('on');lbFrom&&lbFrom.focus({preventScroll:true})};$('#lbx').onclick=closeLb;lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
 
-// ОКНО ЗАПИСИ. Telegram личный @BLKV_LIGHT, звонок на номер с карточки. WhatsApp не подтверждён
-const BOOK={tg:'BLKV_LIGHT',phone:'+79951182607',phoneText:'+7 (995) 118-26-07 · звонок или Max',hours:'Ежедневно 10:00–20:00.'};
+// ОКНО ЗАПИСИ. Telegram личный @BLKV_LIGHT; WhatsApp, Max и звонок на одном номере (Александр, 24.11).
+// Max: ссылки по номеру нет, поэтому копируем текст и показываем номер.
+const BOOK={tg:'BLKV_LIGHT',wa:'79951182607',phone:'+79951182607',phoneText:'+7 (995) 118-26-07',hours:'Ежедневно 10:00–20:00.'};
 const DEF='Здравствуйте! Я с сайта, хочу записаться. Машина: ';
 const bk=$('#bk'),bkN=$('#bkN');let bkFrom=null,bkMsg=DEF;
 function openBk(msg,from,sub){bkMsg=msg||DEF;bkFrom=from;bkN.textContent='';
  $('#bkS').textContent=(sub||'Напишите марку машины и что беспокоит, можно с фото фары. ')+BOOK.hours;$('#bkMt').textContent=bkMsg;
- bk.querySelector('[data-ch=tg]').href='https://t.me/'+BOOK.tg;bk.querySelector('[data-ch=call]').href='tel:'+BOOK.phone;$('#bkPh').textContent=BOOK.phoneText;
+ bk.querySelector('[data-ch=tg]').href='https://t.me/'+BOOK.tg;bk.querySelector('[data-ch=wa]').href='https://wa.me/'+BOOK.wa+'?text='+encodeURIComponent(bkMsg);bk.querySelector('[data-ch=call]').href='tel:'+BOOK.phone;$('#bkPh').textContent=BOOK.phoneText;
  bk.setAttribute('aria-hidden','false');document.documentElement.classList.add('lock');requestAnimationFrame(()=>bk.classList.add('on'));
  window.ym&&YM&&ym(YM,'reachGoal','book_open');
  setTimeout(()=>bk.querySelector('.bk-o').focus({preventScroll:true}),350)}
@@ -765,6 +769,7 @@ bk.querySelectorAll('[data-close]').forEach(x=>x.onclick=closeBk);
 bk.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const f=[...bk.querySelectorAll('button,a[href]')];const i=f.indexOf(document.activeElement);if(e.shiftKey&&i<=0){f[f.length-1].focus();e.preventDefault()}else if(!e.shiftKey&&i===f.length-1){f[0].focus();e.preventDefault()}});
 addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(bk.classList.contains('on'))closeBk();else closeLb()});
 bk.querySelector('[data-ch=tg]').addEventListener('click',()=>{if(navigator.clipboard)navigator.clipboard.writeText(bkMsg).then(()=>bkN.textContent='Текст скопирован, вставьте его в чат',()=>{})});
+bk.querySelector('[data-ch=max]').addEventListener('click',()=>{window.ym&&YM&&ym(YM,'reachGoal','lead_max');const done=()=>bkN.textContent='Текст скопирован. Откройте Max, найдите +7 (995) 118-26-07 и вставьте его в чат';if(navigator.clipboard)navigator.clipboard.writeText(bkMsg).then(done,()=>bkN.textContent='Откройте Max и найдите +7 (995) 118-26-07');else bkN.textContent='Откройте Max и найдите +7 (995) 118-26-07'});
 
 (()=>{const OPEN=10,CLOSE=20,h=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Moscow'})).getHours(),o=h>=OPEN&&h<CLOSE,l=$('#live');
  l.classList.toggle('cl',!o);l.querySelector('span').textContent=o?`Открыто до ${CLOSE}:00`:`Закрыто до ${OPEN}:00`})();
@@ -804,13 +809,13 @@ buildMq();addEventListener('resize',buildMq);
  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd()})();
 </script>
 <!-- Яндекс Метрика. Вставить номер счётчика в YM, пока пусто, ничего не грузится.
-     Цели (JavaScript-событие): lead_tg, lead_call (= обращения), book_open, route -->
+     Цели (JavaScript-событие): lead_tg, lead_wa, lead_max, lead_call (= обращения), book_open, route -->
 <script>
 var YM='';
 (()=>{if(!YM)return;
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 ym(YM,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-const goal=h=>/t\.me\//.test(h)?'lead_tg':/^tel:/.test(h)?'lead_call':/rtext=/.test(h)?'route':'';
+const goal=h=>/t\.me\//.test(h)?'lead_tg':/wa\.me\//.test(h)?'lead_wa':/^tel:/.test(h)?'lead_call':/rtext=/.test(h)?'route':'';
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||'');if(g)ym(YM,'reachGoal',g)},true);
 })();
 </script>
